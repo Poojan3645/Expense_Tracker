@@ -1,0 +1,35 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: #12161d;
+  color: #fff;
+}
+
+.main-content{
+    margin-left:290px;
+}
+
+#sidebar{
+    background-color:#12161d;
+    border-right:1px dashed rgba(75,82,85,0.24);
+    padding: 10px 20px;
+
+}
+.table {
+    color: #e9ecef;
+}
+

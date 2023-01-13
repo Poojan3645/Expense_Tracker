@@ -1,0 +1,60 @@
+﻿@model ExpenseTracker.Models.Expenses
+
+@{
+    ViewData["Title"] = "Create";
+    SelectList Categories = ViewData["Categories"] as SelectList;
+}
+
+<script>
+    var error = '@TempData["err"]';
+    if (error) {
+        alert(error);
+    }
+</script>
+
+<h1>Create</h1>
+
+<h4>Expenses</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="mb-3">
+                <ejs-datepicker id="date" ejs-for="Date"
+                                placeholder="Date" floatLabelType="Always"
+                                format="MMM-dd-yy">
+                </ejs-datepicker>
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+
+                <select asp-for="CategoryId" asp-items="Categories" class="form-select" id="select-branch"></select>
+
+            </div>
+            <div class="mb-3">
+                <ejs-textbox id="title" placeholder="Title" ejs-for="Title" floatLabelType="Always"></ejs-textbox>
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <ejs-textbox id="Description" placeholder="Description" ejs-for="Description" floatLabelType="Always"></ejs-textbox>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <ejs-numerictextbox id="amount" placeholder="Amount" ejs-for="Amount" floatLabelType="Always"></ejs-numerictextbox>
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
