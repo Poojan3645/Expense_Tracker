@@ -12,12 +12,12 @@
       - Syncfusion Ej2 ASP.NET core
       
 # Steps for Run the Project
-step 1: open visual studio
-step 2: install the prerequisites 
-step 3: load the project 
-step4: use command update-database in your package manager
-step5: run the program 
-step7: open the index.html from the directory
+step 1: open visual studio <br>
+step 2: install the prerequisites <br> 
+step 3: load the project <br>
+step4: use command update-database in your package manager <br>
+step5: run the program <br>
+step7: open the index.html from the directory <br>
 
 # Screenshots
 
